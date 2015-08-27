@@ -1,0 +1,156 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Google Analytics To Salesforce Wave</title>
+    <meta name="description" content="website description" />
+    <meta name="keywords" content="website keywords, website keywords" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+                <div class="container">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-menu">
+                        <i class="fa fa-navicon"></i>
+                    </button>
+                    <a class="navbar-brand" href="/">Cervello</a>
+                    <span class="navbar-title"></span>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse" id="top-menu">
+                <div class="container">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="architecture.html">Architecture</a></li>
+                        <li><a href="walkthrough.html">Walkthrough</a></li>
+                        <li class="active"><a href="setup.html">Setup</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="https://github.com/Cervello/google-analytics-to-salesforce-wave" target="_blank" class="github-link">
+                                <i class="fa fa-github"></i>
+                                Github Project
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="collage">
+        <div class="container">
+            <h2>Google Analytics to Salesforce Wave</h2>
+            <h4>Simple Integration via APIs</h4>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container">
+            <h1>Setup</h1>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2>Deploying to Heroku using the Heroku Button</h2>
+                    <p>You can deploy your own version of GA2SW in seconds using the Heroku button below:</p>
+                    <p><a href="https://heroku.com/deploy"><img src="https://www.herokucdn.com/deploy/button.png" alt="Deploy"></a></p>
+                    <h2>Deploying to Heroku using the Command Line</h2>
+                    <p>You can also deploy GA2SW to Heroku using the command line:</p>
+                    <ol>
+                        <li>
+                            <p>Clone the repository</p>
+                            <div class="highlight">
+                                <pre><code class="language-text" data-lang="text">git clone https://github.com/Cervello/google-analytics-to-salesforce-wave</code></pre>
+                            </div>
+                        </li>
+                        <li>
+                            <p>Create a Heroku application</p>
+                            <div class="highlight">
+                                <pre><code class="language-text" data-lang="text">cd ga2sw <br />heroku create</code></pre>
+                            </div>
+                        </li>
+                        <li>
+                            <p>Install the Postgres plugin    </p>
+                            <div class="highlight">
+                                <pre><code class="language-text" data-lang="text">heroku addons:add heroku-postgresql:dev</code></pre>
+                            </div>
+                        </li>
+                        <li>
+                            <p>Deploy to Heroku</p>
+                            <div class="highlight">
+                                <pre><code class="language-text" data-lang="text">git push heroku master</code></pre>
+                            </div>
+                        </li>
+                        <li>
+                            <p>Run the the application:</p>
+                            <ul>
+                                <li>
+                                    <p>Open the application in a browser:</p>
+                                    <div class="highlight">
+                                        <pre><code class="language-text" data-lang="text">heroku open</code></pre>
+                                    </div>
+                                </li>
+                                <li><p>Use "Admin" as username and "admin" as password to login</p></li>
+                            </ul>
+
+                        </li>
+                    </ol>
+                    <h2>Installing a Local Version</h2>
+                    <p>You can also install GA2SW on your local machine:</p>
+                    <ol>
+                        <li>
+                            <p>Clone the repository</p>
+                            <div class="highlight">
+                                <pre><code class="language-text" data-lang="text">git clone https://github.com/Cervello/google-analytics-to-salesforce-wave </code></pre>
+                            </div>
+                        </li>
+                        <li>
+                            <p>Install the server dependencies</p>
+                            <div class="highlight">
+                                <pre><code class="language-text" data-lang="text">cd ga2sw <br />npm install</code></pre>
+                            </div>
+                        </li>
+                        <li>
+                            <p>Create a local database</p>
+
+                            <ul>
+                                <li>Install and start <a href="http://www.postgresql.org/">Postgres</a> on your local machine</li>
+                                <li>Create a database called <strong>ga2sw</strong></li>
+                                <li>If your database is available using <strong>postgres://@127.0.0.1:5432/ga2sw</strong>, you have nothing else to do</li>
+                                <!--  <li>If you use another database URL, either define a shell environment variable called <strong>DATABASE_URL</strong>, or modify <strong>server/config.js</strong> to provide your own default URL</li>-->
+                            </ul>
+                        </li>
+                        <li>
+                            <p>Start the server    </p>
+                            <div class="highlight">
+                                <pre><code class="language-text" data-lang="text">node server</code></pre>
+                            </div>
+                        </li>
+                        <li>
+                            <p>Run the application</p>
+
+                            <ul>
+                                <li>
+                                    Open a browser and access the following URL:
+                                    <a href="http://localhost:5000">http://localhost:5000</a>
+                                </li>
+                                <li>Use "Admin" as username and "admin" as password to login</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                &copy; <a href="http://mycervello.com">Cervello Inc.</a> 2015 All rights reserved
+            </div>
+        </div>
+</body>
+</html>

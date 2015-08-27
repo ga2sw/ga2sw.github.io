@@ -1,0 +1,243 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin);
+
+
+body {
+	font-family:"Open Sans",helvetica,sans serif;
+}
+
+/* Header / Nav */
+
+.navbar {
+	border-radius: 0;
+	border: none;
+	margin:0;
+	color: #fff;
+}
+
+.navbar-default .navbar-header {
+	float:none;
+	border-bottom:1px solid #d3dddf;
+}
+.navbar-brand {
+	display:block;
+	text-indent:-500px;
+	overflow:hidden;
+	margin:15px 0 0 0;
+	width:126px;
+	height:30px;
+	background: url('../img/logo-small.png') no-repeat 0 0;
+}
+.navbar-title {
+	display:inline-block;
+	float:left;
+	font-family:"Open Sans",helvetica,sans serif;
+	font-size:22px;
+	height:60px;
+	line-height:58px;
+	color:#536e77;
+	padding-left:50px;
+	overflow:hidden;
+	background: url('../img/corner.png') no-repeat 15px 50%;
+}
+
+
+
+.navbar-default .navbar-toggle {
+	border:none;
+	padding:0;
+	margin:0;
+	border-radius:0;
+}
+.navbar-default .navbar-toggle,
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+	color: #fff;
+	background: #007298;
+}
+.navbar-default .navbar-toggle.collapsed {
+	background:none;
+	color: #007298;
+}
+
+.navbar-default .navbar-toggle .fa {
+	font-size:36px;
+	width:66px;
+	height:60px;
+	line-height:60px;
+	text-align:center;
+}
+
+
+
+.navbar-default .navbar-nav > li > a {
+	font-size:14px;
+	padding:10px 15px;
+	color: #c1f0ff;
+}
+.navbar-default .navbar-nav > li > a:hover, 
+.navbar-default .navbar-nav > li > a:focus {
+	color: #fff;
+	background:none;
+}
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+	color: #fff;
+	background-color: #005c7b;
+}
+.navbar-default .navbar-nav > li > a.github-link {
+	color:#fff;
+}
+.navbar-default .navbar-nav > li > a.github-link .fa {
+	font-size:24px;
+	margin:-1px 5px 0 0;
+	vertical-align: middle;
+}
+
+.navbar-default .navbar-collapse {
+	background-color: #007298;
+}
+.navbar-default .navbar-collapse.in, 
+.navbar-default .navbar-collapse.collapsing, 
+.navbar-default .navbar-form {
+	margin-top:-1px;
+	border: none;
+	-webkit-box-shadow:none;
+	box-shadow:none;
+}
+
+
+
+@media only screen and (min-width : 768px) {
+	.navbar-default .navbar-header {
+		border:none;
+	}
+	.navbar-default .navbar-nav > li > a {
+		padding:0 25px;
+		height:50px;
+		line-height:50px;
+	}
+}
+@media only screen and (max-width : 670px) {
+	.navbar-brand {
+		margin-top:10px;
+		width:28px;
+		height:30px;
+		background: url('../img/logo-sign.png') no-repeat 0 0;
+	}
+	.navbar-title {
+		height:50px;
+		line-height:48px;
+		font-size:16px;
+		padding-left:30px;
+		background-position:5px 50%;
+	}
+	.navbar-default .navbar-toggle .fa {
+		width:56px;
+		height:50px;
+		line-height:50px;
+	}
+}
+@media only screen and (max-width : 440px) {
+	.navbar-title {
+		line-height:20px;
+		padding-top:4px;
+	}
+	.navbar-title span {
+		display:block;
+	}
+}
+
+
+
+/* Collage */
+
+.collage {
+	height: 300px;
+	background:#5c7a82 url("../img/banner_1_GreyIcons.jpg") no-repeat 50% 50%;
+	background-size:170% auto;
+}
+.collage h2 {
+	font-family:"Open Sans",helvetica,sans serif;
+	font-size:60px;
+	color:#fff;
+	text-align:center;
+	margin-top:100px;
+}
+.collage h4 {
+	font-family:"Open Sans",helvetica,sans serif;
+	font-size:30px;
+	color:#fff;
+	text-align:center;
+	margin-top:15px;
+}
+
+@media only screen and (max-width : 767px) {
+	.collage {
+		height:220px;
+	}
+	.collage h2 {
+		font-size:40px;
+		margin-top:80px;
+	}
+}
+@media only screen and (max-width : 480px) {
+	.collage {
+		height:160px;
+	}
+	.collage h2 {
+		font-size:26px;
+		margin-top:60px;
+	}
+    .collage h4 {
+		font-size:26px;
+	}
+}
+
+
+/* Content */
+
+.content {}
+
+.content img {
+	height:auto;
+	max-width: 100%;
+	margin: 10px 0px;
+}
+
+@media only screen and (min-width:980px){
+	.col-lg-4 {
+		float:left;
+		width:33.33333333%;
+	}
+}
+@media only screen and (max-width:979px){
+	.col-lg-4 + .col-lg-4 {
+		margin-top:40px;
+	}
+	.col-lg-4 ul {
+		display:block;
+		width:80%;
+		margin:0 auto;
+	}
+}
+@media only screen and (max-width : 480px) {
+	.col-lg-4 ul {
+		width:auto;
+	}
+}
+
+
+
+/* Footer */
+
+.footer {
+	margin-top:50px;
+	background-color: #182a2f;
+	color:#fff;
+	padding:35px 0px;
+}
+.footer a {
+	color:#fff;
+	text-decoration:none;
+}
