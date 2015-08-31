@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <html>
 <head>
     <title>Google Analytics To Salesforce Wave</title>
@@ -96,7 +96,7 @@
                                         <pre><code class="language-text" data-lang="text">heroku open</code></pre>
                                     </div>
                                 </li>
-                                <li><p>Use "Admin" as username and "admin" as password to login</p></li>
+                                <li><p>Use "admin" as username and "cervello" as password to login</p></li>
                             </ul>
 
                         </li>
@@ -113,7 +113,7 @@
                         <li>
                             <p>Install the server dependencies</p>
                             <div class="highlight">
-                                <pre><code class="language-text" data-lang="text">cd ga2sw <br />npm install</code></pre>
+                                <pre><code class="language-text" data-lang="text">cd ga2sw <br />download and install java8, playframework 2.3.9, PostgreSQL, Node.js</code></pre>
                             </div>
                         </li>
                         <li>
@@ -121,15 +121,17 @@
 
                             <ul>
                                 <li>Install and start <a href="http://www.postgresql.org/">Postgres</a> on your local machine</li>
-                                <li>Create a database called <strong>ga2sw</strong></li>
-                                <li>If your database is available using <strong>postgres://@127.0.0.1:5432/ga2sw</strong>, you have nothing else to do</li>
+                                <li>Create a database (psql command) called <strong>ga2sw</strong></li>
+                                <li>Create user (psql command): <strong>create user ga2sw superuser password 'ga2sw'; </strong> </li>
+                                <li>Add system environment <strong>DATABASE_URL=postgres://ga2sw:ga2sw@localhost:5432/ga2sw</strong> </li>
+                                <!--<li>If your database is available using <strong>postgres://@127.0.0.1:5432/ga2sw</strong>, you have nothing else to do</li>-->
                                 <!--  <li>If you use another database URL, either define a shell environment variable called <strong>DATABASE_URL</strong>, or modify <strong>server/config.js</strong> to provide your own default URL</li>-->
                             </ul>
                         </li>
                         <li>
                             <p>Start the server    </p>
                             <div class="highlight">
-                                <pre><code class="language-text" data-lang="text">node server</code></pre>
+                                <pre><code class="language-text" data-lang="text">start application: activator run </code></pre>
                             </div>
                         </li>
                         <li>
@@ -138,9 +140,9 @@
                             <ul>
                                 <li>
                                     Open a browser and access the following URL:
-                                    <a href="http://localhost:5000">http://localhost:5000</a>
+                                    <a href="http://localhost:9000">http://localhost:9000</a>
                                 </li>
-                                <li>Use "Admin" as username and "admin" as password to login</li>
+                                <li>Use "admin" as username and "cervello" as password to login</li>
                             </ul>
                         </li>
                     </ol>
