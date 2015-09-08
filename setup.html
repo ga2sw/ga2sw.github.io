@@ -31,8 +31,9 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="features.html">Features</a></li>
                         <li><a href="architecture.html">Architecture</a></li>
-                        <li><a href="walkthrough.html">Walkthrough</a></li>
                         <li class="active"><a href="setup.html">Setup</a></li>
+                        <li><a href="walkthrough.html">Walkthrough</a></li>
+                        
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li>
@@ -60,6 +61,7 @@
                     <h2>Deploying to Heroku using the Heroku Button</h2>
                     <p>You can deploy your own version of GA2SW in seconds using the Heroku button below:</p>
                     <p><a href="https://heroku.com/deploy?template=https://github.com/Cervello/google-analytics-to-salesforce-wave"><img src="https://www.herokucdn.com/deploy/button.png" alt="Deploy"></a></p>
+                    <p>On installation, Use "admin" as username and "cervello" as password to login.</p>
                     <h2>Deploying to Heroku using the Command Line</h2>
                     <p>You can also deploy GA2SW to Heroku using the command line:</p>
                     <p>Pre-requisites: <a href="https://git-scm.com/downloads" target="_blank">Git</a> and <a href="https://toolbelt.heroku.com/" target="_blank">Heroku toolbelt</a></p>
@@ -68,28 +70,28 @@
                         <li>
                             <p>Clone the repository</p>
                             <div class="highlight">
-                                <pre><code class="language-text" data-lang="text">git clone https://github.com/Cervello/google-analytics-to-salesforce-wave</code></pre>
+                                <pre><code class="language-text" data-lang="text">git clone https://github.com/Cervello/google-analytics-to-salesforce-wave.git  my-ga2sw</code></pre>
                             </div>
                         </li>
                         <li>
-                            <p>Create a Heroku application</p>
+                            <p>Navigate into Heroku application</p>
                             <div class="highlight">
-                                <pre><code class="language-text" data-lang="text">cd ga2sw <br />heroku create</code></pre>
+                                <pre><code class="language-text" data-lang="text">cd my-ga2sw </code></pre>
                             </div>
                         </li>
                         <li>
                             <p>Install the Postgres plugin    </p>
                             <div class="highlight">
-                                <pre><code class="language-text" data-lang="text">heroku addons:add heroku-postgresql:dev</code></pre>
+                                <pre><code class="language-text" data-lang="text">heroku addons:create heroku-postgresql:hobby-dev</code></pre>
                             </div>
                         </li>
-                        <li>
+                      <!--  <li>
                             <p>Git Remote</p>
                             <div class="highlight">
                                 <pre><code class="language-text" data-lang="text">heroku git:remote</code></pre>
                             </div>
                              Reference : <a href="https://devcenter.heroku.com/articles/git#creating-a-heroku-remote" target="_blank">https://devcenter.heroku.com/articles/git#creating-a-heroku-remote</a>
-                        </li>
+                        </li>-->
                         <li>
                             <p>Deploy to Heroku</p>
                             <div class="highlight">
@@ -110,6 +112,7 @@
 
                         </li>
                     </ol>
+                    <!--
                     <h2>Installing a Local Version</h2>
                     <p>You can also install GA2SW on your local machine:</p>
                     <ol>
@@ -133,8 +136,6 @@
                                 <li>Create a database (psql command) called <strong>ga2sw</strong></li>
                                 <li>Create user (psql command): <strong>create user ga2sw superuser password 'ga2sw'; </strong> </li>
                                 <li>Add system environment <strong>DATABASE_URL=postgres://ga2sw:ga2sw@localhost:5432/ga2sw</strong> </li>
-                                <!--<li>If your database is available using <strong>postgres://@127.0.0.1:5432/ga2sw</strong>, you have nothing else to do</li>-->
-                                <!--  <li>If you use another database URL, either define a shell environment variable called <strong>DATABASE_URL</strong>, or modify <strong>server/config.js</strong> to provide your own default URL</li>-->
                             </ul>
                         </li>
                         <li>
@@ -155,6 +156,8 @@
                             </ul>
                         </li>
                     </ol>
+                    -->
+                    <h4>Once you have the setup completed, follow the <a href="walkthrough.html">Walkthrough</a>.</h4>
                 </div>
             </div>
         </div>
