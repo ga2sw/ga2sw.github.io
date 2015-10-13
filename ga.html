@@ -70,7 +70,7 @@
                         <li>In both scenarios,&nbsp;Click on ‘Create Project’ button.</li>
                         <li>
                             A popup will appear, where you will enter ‘Project Name’ and ‘Project ID’ which will help you to recognize&nbsp;your project in console.
-
+                            <br/>
                             <img alt="Enter Project Name - Google Developers Console" width="508" height="250" src="img/content/profiles/2-ID-e1440848028749.png">
                             <br />
                             <i>Enter Project Name – Google Developers Console</i>
@@ -81,25 +81,41 @@
                         <li>
                             See left side navigation menu. Go to APIs &amp; auth -&gt; APIs and Select ‘Analytics API’ and Turn in ‘ON’.
                             <img alt="Enable Ananlytics API in Google Developers Console" width="687" height="361" src="img/content/profiles/3-Ananlytics-API.png">
-                            <br /> <i>Enable Ananlytics API in Google Developers Console</i>
+                            <br /> <i>Enable Analytics API in Google Developers Console</i>
+                            <img alt="Enable Ananlytics API in Google Developers Console" src="img/content/profiles/EnableAPI.png">
 
                         </li>
+                        <!--
                         <li>
                             Next, Go to APIs &amp; Auth -&gt; Credentials -&gt; OAuth Consent Screen and Enter your Product name “My-GA2SW” and Save it.
                             <img alt="Enter Product Name - Google Developers Console" width="670" height="406" src="img/content/profiles/consent-screen-google-project-console.png">
                             <br /> <i>Enter Product Name – Google Developers Console</i>
 
                         </li>
+                        -->
                         <li>
-                            Go to&nbsp;APIs &amp; auth -&gt; Credentials. Click on OAuth 2.0 Client ID and Select ‘Website’ from options. Ensure to add the Authorized Redirect Urls
+                            Go to&nbsp;APIs &amp; auth -&gt; Credentials. Click on OAuth 2.0 Client ID 
                             <img alt="Get OAuth 2.0 Client ID - Google Developers Console" width="658" height="309" src="img/content/profiles/5-Add-Credential-2.png">
+                        </li>
+                        <li>
+                            To create an OAuth client ID, you must first set a product name on the consent screen
+                            <br/>Click on Configure Consent Screen and Enter your Product name “My-GA2SW” and Save it.
+                            <img alt="Get OAuth 2.0 Client ID - Google Developers Console"  src="img/content/profiles/EnableConsentScreen.png">
+                            <br/>
+                            Once the Consent Screen is filled and saved, the page will redirect itself prompting that the data is saved and ready for next step. <br>
+                            Select "Web Application" and few other options are enabled. <br/>
                             <img alt="Get OAuth 2.0 Client ID - Google Developers Console"  src="img/content/profiles/05a. Fill Form.png">
+                            <br/>
+                            Leave the name AS IS and ensure that you add the application url in "Authorized redirect URIs" section as "https://YourApplicatioName.herokuapp.com/google_signin" (Hit enter in the text box to get the item added).
+                            <br/>Click on Create button.
+                            <br/>
                             <br /> <i>Get OAuth 2.0 Client ID – Google Developers Console</i>
 
                         </li>
-                        <li>You will see a popup containing Client ID and Client Secret. Copy that and paste it in Plugin.
+                        <li>You will see a popup containing Client ID and Client Secret. Copy that and paste it in the Google Analytics Profile Setup of the application.
     						<img alt="Get OAuth 2.0 Client ID - Google Developers Console"  src="img/content/profiles/05b. GetKeys.png">
                         </li>
+                        <!--
                         <li>
                             Now, you need to get Public API Key.
                             <img alt="Create Public API Key - Google Project Console" width="688" height="226" src="img/content/profiles/11-API-Key-Req.png">
@@ -112,10 +128,18 @@
                             <br /> <i>Select Browser Key – Google Project Console</i>
 
                         </li>
+                        -->
                         <li>
-                            If you have done all the above steps correctly, you should see the page like below screen.
-                            <img alt="Get your Client ID, Client Secret and API keys - Google Project Console." width="632" height="193" src="img/content/profiles/api-keys-clientid-secret-keys.png">
-                            <br /> <i>Get your Client ID, Client Secret and API keys – Google Project Console.</i>
+                            <i>Next steps are required, only if you forgot to capture your Client ID and Client Secret as part of previous screen or if you want to retrieve later.</i>
+                            <br>
+                            Go to&nbsp;APIs &amp; auth -&gt; Credentials. 
+                            <br> Click on Name (Web client 1).
+                            <img alt="Get your Client ID, Client Secret and API keys - Google Project Console."  src="img/content/profiles/ClientIDsList.png">
+                            <br /> 
+                            From this screen you can get your Client ID and Client Secret and use them in creating the profile in your application.
+                            <img alt="Get your Client ID, Client Secret and API keys - Google Project Console."  src="img/content/profiles/RetrieveIDandSecret.png">
+                            <br>
+                            <i>Get your Client ID and Client Secret  – Google Project Console.</i>
 
                         </li>
                     </ol>
